@@ -7,7 +7,6 @@ $(function() {
   function addHTML(people) {
     $(".right__result__people").remove();
     people.forEach(function(result){
-////////////////
       var HTML = `
       <div class="right__result__people">
       ${result.family}　${result.first}
@@ -19,37 +18,28 @@ $(function() {
   
   $('.left__list__btn').on('click', function(e) {
     e.preventDefault();
-    all_people = init()
+// 問題１　配列all_peopleにfamilyの値を入れてください////////
+
+////////////////////////////////////////////////////
     addHTML(all_people)
   })
   
   $('.left__search__btn').on('click',function(e){
     e.preventDefault();
-    all_people = init()
     satou = []
-    all_people.forEach(function(people){
-      if (people.family === "佐藤"){
-        satou.push(people)
-      }
-    })
+// 問題２　配列satouに佐藤さんだけ入れてください//////////////
+
+////////////////////////////////////////////////////
     addHTML(satou)
   })
   
   $('.left__delete__btn').on('click',function(e){
     e.preventDefault();
-    all_people = init()
-    let delete_list = []
-    $.each(all_people,function(i,people) {
-      if (people.family === "佐藤"){
-        delete_list.push(i)
-      };
-    })
-    i = all_people.length
-    while (i--){
-      if (delete_list.indexOf(i) != -1) {
-        all_people.splice(i,1)
-      }
-    }
+// 問題３　配列all_peopleに佐藤さん以外だけ入れてください////
+// 但し、佐藤さん以外を「加える」のではなく、///////////////
+// 佐藤さんを「消す」方向で解決してください/////////////////
+
+/////////////////////////////////////////////////////
     addHTML(all_people)
   })
 });
