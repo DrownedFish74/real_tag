@@ -1,0 +1,10 @@
+.left{
+  width: 320px;
+  &__title{
+    font-size: 40px;
+    font-weight: bold;
+  }
+  button{
+    width: 200px;
+  }
+}
